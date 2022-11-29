@@ -28,13 +28,11 @@ Warden::Strategies.add(:password) do
   def authenticate!
     user = User.find_by(username: params['username'])
 
-    if user.nil?
-      throw(:warden, message: "The username you entered does not exist.")
-    elsif user.authenticate(params['password'])
-      success!(user)
-    else
-      throw(:warden, message: "The username and password combination ")
+    if user && user.authenticate(params['password'])
+      return success!(user)
     end
+
+    throw(:warden, message: "Invalid username and/or password")
   end
 end
 
