@@ -76,7 +76,7 @@ module Template
                             action: 'unauthenticated'
       # When a user tries to log in and cannot, this specifies the
       # app to send the user to.
-      config.failure_app = self
+      config.failure_app = Template::App
     end
 
     Warden::Manager.before_failure do |env, opts|
@@ -88,14 +88,6 @@ module Template
       env.each do |key, value|
         env[key]['_method'] = 'post' if key == 'rack.request.form_hash'
       end
-    end
-
-    post '/unauthenticated' do
-      session[:return_to] = env['warden.options'][:attempted_path] if session[:return_to].nil?
-
-      # Set the error and use a fallback if the message is not defined
-      flash[:error] = env['warden.options'][:message] || "You must log in"
-      redirect '/login'
     end
   end
 end

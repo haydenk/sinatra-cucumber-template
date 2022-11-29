@@ -21,6 +21,13 @@ module Template
       redirect '/'
     end
 
+    post '/unauthenticated' do
+      session[:return_to] = env['warden.options'][:attempted_path] if session[:return_to].nil?
+
+      # Set the error and use a fallback if the message is not defined
+      flash[:error] = env['warden.options'][:message] || "You must log in"
+      redirect '/login'
+    end
   end
 end
 
