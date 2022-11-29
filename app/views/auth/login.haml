@@ -1,0 +1,12 @@
+%h1 Login
+
+%form{url: '/login', method: 'post', role: 'form'}
+  %p
+    %label{for: :username} Username
+    %input{type: :text, name: :username, autofocus: true, id: :username}
+
+  %p
+    %label{for: :password} Password
+    %input{type: :password, name: :password, autofocus: true, id: :password}
+
+  %button{type: :submit} Login

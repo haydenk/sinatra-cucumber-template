@@ -3,6 +3,8 @@ ruby RUBY_VERSION
 
 gem 'sinatra', '~> 2.2', :require => 'sinatra/base'
 gem 'sinatra-contrib', '~> 2.2'
+gem 'sinatra-flash', '~> 0.3.0', require: 'sinatra/flash'
+gem 'warden', '~> 1.2', '>= 1.2.9'
 gem 'haml', '~> 6.0', '>= 6.0.11'
 gem "puma", "~> 5.0"
 gem 'oj', '~> 3.13', '>= 3.13.14'

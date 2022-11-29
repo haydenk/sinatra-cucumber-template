@@ -1,3 +1,3 @@
-require_relative 'config/boot'
+require_relative 'config/application'
 require 'sinatra/activerecord'
 require 'sinatra/activerecord/rake'
