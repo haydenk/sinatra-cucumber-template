@@ -45,7 +45,6 @@ module Template
 
     configure do
       register Sinatra::Flash
-      set :database_file, File.join(settings.root, 'config/database.yml')
       set :environment => ENV.fetch('RACK_ENV').to_sym ||= :development
       set :root, File.realpath('.')
       set :public_folder => File.join(settings.root, 'public')
