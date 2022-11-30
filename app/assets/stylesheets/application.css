@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-50;
+}
+
+a {
+    @apply text-blue-500 underline;
+}
+
+.alert {
+    @apply border-l-4 p-4 mx-2 mt-2;
+}
+
+.alert .title {
+    @apply font-bold;
+}
+
+.alert.danger {
+    @apply bg-red-100 border-red-500 text-red-700;
+}
+
+.alert.warning {
+    @apply bg-orange-100 border-orange-500 text-orange-700;
+}
+
+.alert.success {
+    @apply bg-teal-100 border-teal-500 text-teal-700;
+}
+
+.alert.info {
+    @apply bg-blue-100 border-blue-500 text-blue-700;
+}
+
+.container {
+    @apply h-0 min-h-[576px] bg-gray-50 ;
+}
+
+.hero {
+    @apply relative px-6 lg:px-8;
+}
+
+.hero-inner {
+    @apply mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40;
+}
+
+.hero-inner h1 {
+    @apply text-4xl font-bold tracking-tight sm:text-center sm:text-6xl;
+}
+
+.hero-inner p {
+    @apply mt-6 text-lg leading-8 text-gray-600 sm:text-center;
+}
+
+.login-container {
+    @apply flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.login-inner {
+    @apply w-full max-w-md space-y-8;
+}
+
+.login-inner h1 {
+    @apply mt-6 text-center text-3xl font-bold tracking-tight text-gray-900;
+}
+
+.login-container form {
+    @apply mt-8 space-y-6;
+}
+
+.login-container form .form-inputs {
+    @apply -space-y-px rounded-md shadow-sm;
+}
+
+.login-container form input[type=text], input[type=password] {
+    @apply relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm;
+}
+
+.login-container #username {
+    @apply rounded-t-md;
+}
+
+.login-container #password {
+    @apply rounded-b-md;
+}
+
+.login-container form button[type=submit] {
+    @apply relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+}
+
+.login-container form button[type=submit] span {
+    @apply absolute inset-y-0 left-0 flex items-center pl-3;
+}
+
+.login-container form button[type=submit] span svg {
+    @apply h-5 w-5 text-indigo-500 group-hover:text-indigo-400;
+}

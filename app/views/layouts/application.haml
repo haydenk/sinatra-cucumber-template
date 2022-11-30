@@ -4,11 +4,14 @@
     %title Sinatra
     %meta{:name => "viewport", :content => "width=device-width,initial-scale=1"}
   %body
-    - if flash[:success]
-      %div{:style => "color: green"}
-        = flash[:success]
-    - if flash[:error]
-      %div{:style => "color: red"}
-        = flash[:error]
+    .container
+      - if flash[:success]
+        %div.alert.success
+          = flash[:success]
+      - if flash[:error]
+        %div.alert.danger
+          = flash[:error]
 
-    = yield
+      = yield
+
+    %script{src: 'js/app.js'}
