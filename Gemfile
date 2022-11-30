@@ -18,4 +18,9 @@ group :development, :test do
   gem 'rake', '~> 13.0', '>= 13.0.6'
   gem 'sqlite3', '~> 1.4', '>= 1.4.3'
   gem 'foreman', '~> 0.87.2'
+  gem 'cucumber', '~> 3.1'
+  gem 'capybara', '~> 2.17'
+  gem 'rspec', '~> 3.7'
+  gem 'rack-test', '~> 0.8.2'
+  gem 'selenium-webdriver', '~> 3.8'
 end

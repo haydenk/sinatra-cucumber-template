@@ -39,7 +39,7 @@ end
 module Template
   class BaseApp < Sinatra::Base
     helpers ApplicationHelpers
-    configure :development, :test do
+    configure :development do
       register Sinatra::Reloader
     end
 
